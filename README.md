@@ -302,30 +302,7 @@ The `.asc` files can be opened and simulated using LTspice.
 
 ---
 
-# 📑 Final Report
 
-The final report follows the required submission format and contains:
-
-* Cover page
-* Scanned handwritten calculations
-* Circuit designs
-* Simulation figures
-* Measurement tables
-* Thevenin analysis
-* Three methods of determining \(R_{th}\)
-* Thevenin verification
-* Maximum Power Transfer verification
-* Superposition verification
-* Graphical analysis
-* Discussion and conclusions
-
-The final report PDF follows the required naming format:
-
-```text
-OELRep1102_00725205131037.pdf
-```
-
----
 
 # ✅ Verification Summary
 

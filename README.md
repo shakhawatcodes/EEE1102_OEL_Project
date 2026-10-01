@@ -3,11 +3,10 @@
 ## Verification of Thevenin's Theorem, Maximum Power Transfer Theorem & Superposition Theorem
 
 **Course:** EEE1102
-**Project Type:** Open Ended Lab (OEL)
+**Project Type:** Operational Engineering Laboratory (OEL)
 **Student No.:** 00725205131037
-**Student:**  Mohammad Shakhawat Hossain
-**Institution:** Ahsanullah University of Science and Technology
-
+**Student:** Shakhawat Hossain
+**Institution:** AUST
 ---
 
 ## 📌 Project Overview
@@ -120,4 +119,246 @@ $$
 
 ### Method 3 — Open-Circuit Voltage / Short-Circuit Current Method
 
-The Thevenin re
+The Thevenin resistance is determined using:
+
+$$
+R_{th}=\frac{V_{OC}}{I_{SC}}
+$$
+
+where:
+
+* \(V_{OC}\) = open-circuit voltage
+* \(I_{SC}\) = short-circuit current
+
+The three calculated values are compared with the simulation result.
+
+---
+
+# 📊 Variable Load Analysis
+
+A variable load resistance \(R_L\) is connected across the selected terminals.
+
+The load resistance is varied over an appropriate range and step size.
+
+For every value of \(R_L\), the following parameters are measured:
+
+* Load voltage \(V_L\)
+* Load current \(I_L\)
+* Load power \(P_L\)
+
+The same measurements are obtained for both:
+
+1. Original circuit
+2. Thevenin equivalent circuit
+
+---
+
+# 📈 Graphical Analysis
+
+The following graphs are generated from the simulation measurements:
+
+### 1. Load Voltage vs. Load Resistance
+
+$$
+V_L \text{ vs. } R_L
+$$
+
+### 2. Load Current vs. Load Resistance
+
+$$
+I_L \text{ vs. } R_L
+$$
+
+### 3. Load Power vs. Load Resistance
+
+$$
+P_L \text{ vs. } R_L
+$$
+
+The graphs for the original circuit and Thevenin equivalent circuit are compared to verify that both circuits produce equivalent terminal behavior.
+
+---
+
+# ⚙️ Maximum Power Transfer Theorem
+
+The Maximum Power Transfer Theorem states that maximum power is delivered to the load when:
+
+$$
+R_L=R_{th}
+$$
+
+At this condition:
+
+$$
+P_{max}=\frac{V_{th}^{2}}{4R_{th}}
+$$
+
+The \(P_L\) vs. \(R_L\) graph is used to identify the load resistance corresponding to maximum power.
+
+The experimentally/simulation-obtained value is compared with the theoretical condition:
+
+$$
+R_L \approx R_{th}
+$$
+
+---
+
+# 🔄 Superposition Theorem
+
+Since the circuit contains **two independent voltage sources**, the Superposition Theorem is verified.
+
+The response of the circuit is analyzed under three conditions:
+
+### Case 1 — Both Sources Active
+
+Both voltage sources are active and the required voltage/current is measured.
+
+### Case 2 — Source 1 Active
+
+The second independent voltage source is deactivated by replacing it with a short circuit.
+
+The required voltage/current is measured.
+
+### Case 3 — Source 2 Active
+
+The first independent voltage source is deactivated by replacing it with a short circuit.
+
+The required voltage/current is measured.
+
+The individual contributions are then added algebraically:
+
+$$
+V = V_1+V_2
+$$
+
+$$
+I = I_1+I_2
+$$
+
+The result is compared with the response obtained when both sources are active.
+
+---
+
+# 📋 Measurements
+
+The project contains measurement data for the following parameters:
+
+| Analysis               | Parameters                         |
+| ---------------------- | ---------------------------------- |
+| Original Circuit       | \(V_L, I_L, P_L\)                  |
+| Thevenin Circuit       | \(V_L, I_L, P_L\)                  |
+| Thevenin Analysis      | \(V_{OC}, I_{SC}, V_{th}, R_{th}\) |
+| Maximum Power Transfer | \(R_L, P_{max}\)                   |
+| Superposition          | Voltage and current contributions  |
+| Load Analysis          | Multiple \(R_L\) values            |
+
+Detailed measurement tables and calculations are included in the final report.
+
+---
+
+# 📁 Repository Contents
+
+The repository contains the simulation and supporting files generated during the project.
+
+```text
+EEE1102_OEL_Project/
+│
+├── OELSim1102_00725205131037_a.asc
+├── OELSim1102_00725205131037_b.asc
+├── OELSim1102_00725205131037_c.asc
+├── OELSim1102_00725205131037_d.asc
+├── OELSim1102_00725205131037_e.asc
+├── OELSim1102_00725205131037_f.asc
+├── OELSim1102_00725205131037_g.asc
+├── OELSim1102_00725205131037_h.asc
+├── OELSim1102_00725205131037_i.asc
+│
+├── *.log
+├── *.raw
+├── *.plt
+├── *.net
+│
+└── README.md
+```
+
+### File Types
+
+| Extension | Purpose                           |
+| --------- | --------------------------------- |
+| `.asc`    | Circuit schematic/simulation file |
+| `.raw`    | Simulation raw data               |
+| `.log`    | Simulation output/log information |
+| `.plt`    | Plot configuration/data           |
+| `.net`    | Netlist                           |
+| `.md`     | Project documentation             |
+
+---
+
+# 🖥️ Simulation Software
+
+The circuit simulations and analysis files are prepared using **LTspice**.
+
+The `.asc` files can be opened and simulated using LTspice.
+
+---
+
+# 📑 Final Report
+
+The final report follows the required submission format and contains:
+
+* Cover page
+* Scanned handwritten calculations
+* Circuit designs
+* Simulation figures
+* Measurement tables
+* Thevenin analysis
+* Three methods of determining \(R_{th}\)
+* Thevenin verification
+* Maximum Power Transfer verification
+* Superposition verification
+* Graphical analysis
+* Discussion and conclusions
+
+The final report PDF follows the required naming format:
+
+```text
+OELRep1102_00725205131037.pdf
+```
+
+---
+
+# ✅ Verification Summary
+
+The project verifies the following fundamental circuit theorems:
+
+| Theorem                | Verification                               |
+| ---------------------- | ------------------------------------------ |
+| Thevenin's Theorem     | Original and equivalent circuits compared  |
+| Thevenin Resistance    | Determined using 3 methods                 |
+| Maximum Power Transfer | \(P_L\) vs. \(R_L\) analysis               |
+| Superposition Theorem  | Voltage and current contributions compared |
+
+---
+
+# 👨‍🎓 Student Information
+
+**Student Name:** Shakhawat Hossain
+
+
+**Student ID:** 00725205131037
+
+
+**Course:** EEE1102
+
+**Project:** Open Ended Laboratory (OEL)
+
+
+**Institution:**  Ahsanullah University Of Science and Technology
+---
+
+## 📌 Note
+
+This repository is intended to document the circuit simulation files, measurement data, analysis, and supporting materials for the EEE1102 OEL project.
+
+The circuit is designed specifically for this project and the simulation files are provided for documentation and verification purposes.
+
